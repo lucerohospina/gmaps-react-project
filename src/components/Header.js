@@ -1,8 +1,9 @@
 import React from 'react';
+import '../App.css';
 
 const Header = () => (
-  <div>
-    <h1>This is my Header</h1>
+  <div className="header">
+    <h1>My Map</h1>
   </div>
 
 );
