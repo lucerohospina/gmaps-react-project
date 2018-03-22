@@ -23,6 +23,22 @@ class Map extends Component {
         position: this.uluru,
         map: this.map
       });
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          this.pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+          this.marker.setPosition(this.pos);
+          this.map.setCenter(this.pos);
+        }, function() {
+          this.handleLocationError(true, this.marker, this.map.getCenter());
+        });
+      } else {
+        // Browser doesn't support Geolocation
+        this.handleLocationError(false, this.marker, this.map.getCenter());
+      }
         // this.map = new google.maps.Map(node,
         //   this.setState({center: this.state.center, zoom: this.state.zoom})
         // );
