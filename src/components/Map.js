@@ -12,6 +12,10 @@ class Map extends Component {
     
   }
 
+  componentDidMount() {
+    this.initMap();
+  }
+
     initMap(node) {
       console.log('Hola from node', node);
       this.uluru = {lat: -25.363, lng: 131.044};
@@ -35,7 +39,7 @@ class Map extends Component {
   render() {
     return (
       <div className="map">
-        <div style={{ height: '300px', width: '500px' }} ref={this.initMap}></div>
+        <div style={{ height: '300px', width: '80vw' }} ref={this.initMap}></div>
       </div>
     )
   }
