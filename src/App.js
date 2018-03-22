@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './components/Header';
 import Map from './components/Map';
-// import logo from './logo.svg';
+import Greeting from './components/Greeting';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header/>
-        <Map/>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="bg-color">
+    <Header/>
+    <Map/>
+    <Greeting/>
+  </div>
+
+);
 
 export default App;

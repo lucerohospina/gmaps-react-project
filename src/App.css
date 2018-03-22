@@ -1,10 +1,19 @@
 .header {
   background-color: #000;
-  border: 5px solid rgb(52, 53, 51);
+  border: 5px solid rgb(41, 61, 20);
   color: #fff;
   text-align: center;
 }
 
 .map {
   margin: 5%;
+}
+
+.greeting {
+ text-align: center;
+}
+
+.bg-color {
+  background-color: rgb(245, 240, 240);
+  height: 100vh;
 }

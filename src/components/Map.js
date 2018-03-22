@@ -17,16 +17,20 @@ class Map extends Component {
   }
 
     initMap(node) {
-      console.log('Hola from node', node);
-      this.uluru = {lat: -25.363, lng: 131.044};
-      this.map = new window.google.maps.Map(node, {
-        zoom: 8,
-        center: this.uluru
-      });
-      this.marker = new window.google.maps.Marker({
-        position: this.uluru,
-        map: this.map
-      });
+      if(node instanceof HTMLElement) {
+        console.log('Hola from node', node);
+        this.uluru = {lat: -12.1453661, lng: -77.0240535};
+        this.map = new window.google.maps.Map(node, {
+          zoom: 15,
+          center: this.uluru
+        });
+        this.marker = new window.google.maps.Marker({
+          position: this.uluru,
+          map: this.map
+        });
+        
+      }
+      
         // this.map = new google.maps.Map(node,
         //   this.setState({center: this.state.center, zoom: this.state.zoom})
         // );
